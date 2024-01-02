@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import CommentSectionComponent from '../src/comments-section/commentSection';
+import CommentSectionComponent from './src/comments-section/commentSection';
 
 export const CommentSection = ({
   commentData,
@@ -12,7 +12,6 @@ export const CommentSection = ({
   onEditAction,
 }) => {
   return (
-    
       <CommentSectionComponent
       commentData={commentData}
       currentUserId={currentUserId}
