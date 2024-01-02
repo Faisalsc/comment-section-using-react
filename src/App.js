@@ -1,6 +1,6 @@
 import './App.css';
 import Comments from './comments-section/commentSection';
-// import Comments from './comments-section/testing';
+
 const commentData =[
   {
       "userId": 165,
