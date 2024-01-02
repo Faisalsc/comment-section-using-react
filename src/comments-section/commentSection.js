@@ -11,15 +11,17 @@ const propTypes = {
   onDeleteAction: PropTypes.func,
   commentData: PropTypes.oneOfType([PropTypes.array]),
   currentUserId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  classNameProps: PropTypes.oneOfType([PropTypes.object])
 };
 const defaultProps = {
   commentData: [],
   onSubmitAction: () => {},
   onEditAction: () => {},
   onReplyAction: () => {},
-  onDeleteAction: () => {}
+  onDeleteAction: () => {},
+  classNameProps: {}
 };
-class CommentSection extends Component {
+class CommentSectionComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,10 +41,10 @@ class CommentSection extends Component {
   }
 
   render() {
+    const { classNameProps } = this.props;
     return (
-
       <div>
-        <div className="replies-container">
+        <div className={classNameProps ? (classNameProps.repliesContainer || 'replies-container' ) : 'replies-container'}>
           {this.props.commentData.map((m) => {
             return this.renderCard(m, [], {
               onEditAction: this.props.onEditAction,
@@ -53,7 +55,7 @@ class CommentSection extends Component {
           })}
         </div>
 
-        <div className="comments-container" aria-label="comment">
+        <div className={classNameProps ? (classNameProps.commentsContainer || 'comments-container') : 'comments-container'} aria-label="comment">
           <textarea
             rows="3"
             aria-label="Edit comment"
@@ -83,7 +85,7 @@ class CommentSection extends Component {
   }
 }
 
-CommentSection.propTypes = propTypes;
-CommentSection.defaultProps = defaultProps;
+CommentSectionComponent.propTypes = propTypes;
+CommentSectionComponent.defaultProps = defaultProps;
 
-export default CommentSection;
+export default CommentSectionComponent;
