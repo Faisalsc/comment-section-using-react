@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './commentStyles.css';
-import PersonaCard from './src/comments-section/personaCard';
+import PersonaCard from './comments-section/personaCard';
 
 const propTypes = {
   onSubmitAction: PropTypes.func,

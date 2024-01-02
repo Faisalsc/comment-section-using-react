@@ -28,7 +28,7 @@ class ActionButton extends Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <div className="actions">
           <div
             className="reply"
@@ -96,7 +96,7 @@ class ActionButton extends Component {
             </button>
           </div>
         )}
-      </>
+      </React.Fragment>
 
     );
   }
