@@ -1,8 +1,8 @@
 {
   "name": "comment-section-using-react",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "prepublishOnly": "npm run build"
