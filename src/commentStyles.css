@@ -1,0 +1,62 @@
+
+.textarea { width: 100%; }
+.actions {
+    cursor: pointer;
+    display: flex;
+    margin: 0 0.75em 0 0;
+    color: rgba(0,0,0,.4);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.primary-btn {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    min-width: 80px;
+    height: 32px;
+    float: right;
+    margin-top: 10px;
+}
+.text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.reply {
+    margin-right: 15px;
+}
+
+.card {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.nested-comment { 
+    margin-left: 35px;
+    box-shadow: -1px 0 0 rgba(34,36,38,.15)
+}
+.comments-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff; /* Set a background color if needed */
+    border-top: 1px solid #ccc; /* Add a border for separation */
+    padding: 10px;
+  }
+
+  .replies-container  {
+    max-height: 600px; /* Set the maximum height as needed */
+    overflow: auto;
+  }
+
+  .current-user {
+    display: flex;
+    justify-content: flex-end;
+  }

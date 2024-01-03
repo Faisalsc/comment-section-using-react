@@ -2,7 +2,6 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './commentStyles.css';
 import ActionButton from './actionButton';
 
 function createMarkup(text) {

@@ -4,7 +4,6 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './commentStyles.css';
 
 const propTypes = {
   value: PropTypes.string,
