@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../comments-section/commentStyles.css';
+import './comments-section/commentStyles.css';
 import PersonaCard from './comments-section/personaCard';
 
 const propTypes = {
