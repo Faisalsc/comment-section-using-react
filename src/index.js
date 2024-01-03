@@ -44,7 +44,7 @@ class CommentSection extends Component {
     const { classNameProps } = this.props;
     return (
       <div>
-        <div className={classNameProps ? (classNameProps.repliesContainer || 'replies-container' ) : 'replies-container'}>
+        <div className={classNameProps ? classNameProps.repliesContainer : 'replies-container'}>
           {this.props.commentData.map((m) => {
             return this.renderCard(m, [], {
               onEditAction: this.props.onEditAction,
@@ -55,7 +55,7 @@ class CommentSection extends Component {
           })}
         </div>
 
-        <div className={classNameProps ? (classNameProps.commentsContainer || 'comments-container') : 'comments-container'} aria-label="comment">
+        <div className={classNameProps ? classNameProps.commentsContainer : 'comments-container'} aria-label="comment">
           <textarea
             rows="3"
             aria-label="Edit comment"
