@@ -2,7 +2,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 mode: 'development',
-  entry: './src/index.js', // Your entry point
+  entry: './src/myComponent.js', // Your entry point
   output: {
     filename: 'index.js', // Output bundle name
     path: __dirname + '/dist', // Output directory

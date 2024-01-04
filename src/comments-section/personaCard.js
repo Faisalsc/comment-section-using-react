@@ -35,7 +35,7 @@ class PersonaCard extends Component {
       <div className="card">
 
         <div className="avatar">
-          <img src={avatarUrl} alt="Annie Lindqvist, status is online" />
+          <img src={avatarUrl} style={{ borderRadius: '50%' }} alt="Annie Lindqvist, status is online" width="35px" height="35px" />
         </div>
         <div className="content">
           {fullName}

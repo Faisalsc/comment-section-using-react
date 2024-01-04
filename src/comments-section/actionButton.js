@@ -1,9 +1,6 @@
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './commentStyles.css';
 
 const propTypes = {
   value: PropTypes.string,
@@ -27,24 +24,25 @@ class ActionButton extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <div className="actions">
           <div
             className="reply"
+            role="presentation"
             aria-label="Reply comment"
             onClick={() => {
-              this.setState({ value: '', isReply: !this.state.isReply, isEdit: false });
+              this.setState((prevState) => ({ value: '', isEdit: false, isReply: !prevState.isReply }));
             }
             }
           >
             Reply
-
           </div>
           <div
             className="reply"
+            role="presentation"
             aria-label="Edit comment"
             onClick={() => {
-              this.setState({ value: this.props.value, isReply: false, isEdit: !this.state.isEdit });
+              this.setState((prevState) => ({ value: this.props.value, isEdit: !prevState.isEdit, isReply: false }));
             }}
           >
             Edit
@@ -52,6 +50,7 @@ class ActionButton extends Component {
           </div>
           <div
             className="reply"
+            role="presentation"
             aria-label="Delete comment"
             onClick={() => {
               this.props.actions.onDeleteAction({ comIdToDelete: this.props.commentId });
@@ -64,6 +63,7 @@ class ActionButton extends Component {
         {(this.state.isReply || this.state.isEdit) && (
           <div>
             <textarea
+              className="textarea"
               rows="2"
               value={this.state.value}
               onChange={(e) => {
@@ -95,7 +95,7 @@ class ActionButton extends Component {
             </button>
           </div>
         )}
-      </React.Fragment>
+      </>
 
     );
   }
